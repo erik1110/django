@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Fill
+from .models import Post
 
 # Register your models here.
 
-class FillAdmin(admin.ModelAdmin):
-    list_display = ('delivery_date','campaign_id','campaign_name','channel','create_time')
+class PostAdmin(admin.ModelAdmin):
+    list_display = ('title','slug','body','pub_date')
 
-admin.site.register(Fill, FillAdmin)
+admin.site.register(Post, PostAdmin)
